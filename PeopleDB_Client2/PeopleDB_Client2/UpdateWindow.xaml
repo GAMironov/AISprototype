@@ -1,0 +1,140 @@
+﻿<Window
+    x:Class="PeopleDB_Client2.UpdateWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:PeopleDB_Client2"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Title="UpdateWindow"
+    Width="795.169"
+    Height="356.897"
+    mc:Ignorable="d">
+    <Grid Margin="0,0,3.6,0">
+        <Grid.Background>
+            <ImageBrush ImageSource="App_Data/texture1.png" />
+        </Grid.Background>
+        <TextBox
+            x:Name="textBox1"
+            Width="120"
+            Height="23"
+            Margin="250,42,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            TextWrapping="Wrap" />
+        <ListView
+            Margin="10,86,0.2,116.2"
+            BorderBrush="{x:Null}"
+            FontStyle="Italic"
+            FontWeight="Bold"
+            ItemsSource="{Binding SearchPeople}"
+            ScrollViewer.HorizontalScrollBarVisibility="Disabled">
+            <ListView.Background>
+                <ImageBrush ImageSource="App_Data/texture1.png" />
+            </ListView.Background>
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn
+                        Width="50"
+                        DisplayMemberBinding="{Binding ID}"
+                        Header="ID" />
+                    <GridViewColumn
+                        Width="180"
+                        DisplayMemberBinding="{Binding Name}"
+                        Header="Name" />
+                    <GridViewColumn
+                        Width="180"
+                        DisplayMemberBinding="{Binding Family}"
+                        Header="Family" />
+                    <GridViewColumn
+                        Width="180"
+                        DisplayMemberBinding="{Binding Phone}"
+                        Header="Phone" />
+                    <GridViewColumn
+                        Width="180"
+                        DisplayMemberBinding="{Binding Email}"
+                        Header="Email" />
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <Button
+            x:Name="button1"
+            Width="86"
+            Height="23"
+            Margin="435,42,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Click="button1_click"
+            Content="Найти" />
+        <TextBox
+            x:Name="textBox2"
+            Width="52"
+            Height="23"
+            Margin="10,211,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            TextWrapping="Wrap"
+            Visibility="Hidden" />
+        <TextBox
+            x:Name="textBox3"
+            Width="180"
+            Height="23"
+            Margin="62,211,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            TextWrapping="Wrap"
+            Visibility="Hidden" />
+        <TextBox
+            x:Name="textBox4"
+            Width="181"
+            Height="23"
+            Margin="242,211,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            TextWrapping="Wrap"
+            Visibility="Hidden" />
+        <TextBox
+            x:Name="textBox5"
+            Width="179"
+            Height="23"
+            Margin="423,211,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            TextWrapping="Wrap"
+            Visibility="Hidden" />
+        <TextBox
+            x:Name="textBox6"
+            Width="183"
+            Height="23"
+            Margin="602,211,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            TextWrapping="Wrap"
+            Visibility="Hidden" />
+        <Label
+            x:Name="label"
+            Width="120"
+            Margin="250,16,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Content="Фамилия" />
+        <Button
+            x:Name="button2"
+            Width="75"
+            Margin="326,258,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Click="button2_click"
+            Content="Изменить"
+            Visibility="Hidden" />
+        <Button
+            x:Name="button3"
+            Width="75"
+            Margin="406,258,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Click="button3_click"
+            Content="Удалить"
+            Visibility="Hidden" />
+
+    </Grid>
+</Window>

@@ -1,0 +1,1 @@
+﻿Data Source = MIRONOVPC\SQLSERVERMIRONOV; Initial Catalog = People; Integrated Security = true; User ID = sa; password = 1123;

@@ -1,0 +1,88 @@
+﻿<Window
+    x:Class="PeopleDB_Client2.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:PeopleDB_Client2"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Title="MainWindow"
+    Width="820"
+    Height="450"
+    mc:Ignorable="d">
+    <Grid Margin="0,0,0,0" Opacity="0.98">
+        <Grid.Background>
+            <ImageBrush ImageSource="App_Data/texture1.png" />
+        </Grid.Background>
+        <ListView
+            x:Name="ListView1"
+            Width="794"
+            Margin="0,60,9.6,10"
+            HorizontalAlignment="Right"
+            BorderBrush="{x:Null}"
+            FontStyle="Italic"
+            FontWeight="Bold"
+            ItemsSource="{Binding People}"
+            ScrollViewer.HorizontalScrollBarVisibility="Disabled"
+            TextOptions.TextHintingMode="Fixed">
+            <ListView.Background>
+                <ImageBrush ImageSource="App_Data/texture1.png" />
+            </ListView.Background>
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn
+                        Width="200"
+                        DisplayMemberBinding="{Binding Name}"
+                        Header="Name" />
+                    <GridViewColumn
+                        Width="200"
+                        DisplayMemberBinding="{Binding Family}"
+                        Header="Family" />
+                    <GridViewColumn
+                        Width="200"
+                        DisplayMemberBinding="{Binding Phone}"
+                        Header="Phone" />
+                    <GridViewColumn
+                        Width="200"
+                        DisplayMemberBinding="{Binding Email}"
+                        Header="Email" />
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <Button
+            x:Name="button1"
+            Width="130"
+            Height="24"
+            Margin="10,10,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Click="Button1_Click"
+            Content="Загрузить/Обновить" />
+        <Button
+            x:Name="button2"
+            Width="130"
+            Height="24"
+            Margin="145,10,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Click="Button2_Click"
+            Content="Поиск" />
+        <Button
+            x:Name="button3"
+            Width="130"
+            Height="24"
+            Margin="280,10,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Click="Button3_Click"
+            Content="Добавить" />
+        <Button
+            x:Name="button4"
+            Width="130"
+            Height="24"
+            Margin="415,10,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Click="Button4_Click"
+            Content="Изменить/Удалить" />
+    </Grid>
+</Window>
